@@ -55,3 +55,12 @@ function keepScore() {
   console.log("Ties: " + ties);
   console.log("------------------------");
 }
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+    playRound(i);
+  }
+  keepScore();
+}
+game();
