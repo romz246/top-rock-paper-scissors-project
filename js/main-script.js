@@ -28,3 +28,17 @@ function playRound(playerSelection, computerSelection) {
   console.log("Computer picked: " + computerSelection);
   console.log(winner);
 }
+
+function checkWinner(playerChoice, ComputerChoice) {
+  if (playerChoice === ComputerChoice) {
+    return "Tie!";
+  } else if (
+    (playerChoice === 'rock' && ComputerChoice === 'scissors') ||
+    (playerChoice === 'paper' && ComputerChoice === 'rock') ||
+    (playerChoice === 'scissors' && ComputerChoice === 'paper')
+  ) {
+    return "You Won!"
+  } else {
+    return "Computer Won!"
+  }
+}
