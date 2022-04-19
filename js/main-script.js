@@ -4,7 +4,6 @@ function computerPlay() {
   return choices [Math.floor(Math.random() * choices.length)];
 }
 
-
 function playerPlay() {
   let playerSelection = prompt("Please type 'rock', 'paper' or 'scissors'.");
   playerSelection = playerSelection.toLowerCase();
@@ -15,4 +14,8 @@ function playerPlay() {
     check = confirmChoice(playerSelection);
   }
   return playerSelection;
+}
+
+function confirmChoice (choice) {
+  return choices.includes(choice);
 }
